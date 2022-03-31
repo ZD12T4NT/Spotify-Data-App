@@ -6,8 +6,6 @@ const axios = require('axios');
 const path = require('path');
 
 
-
-
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = process.env.REDIRECT_URI;
@@ -84,10 +82,9 @@ app.get('/callback', (req, res) => {
                       expires_in
                   })
 
-                 // Redirect react app
                 res.redirect(`${FRONTEND_URI}?${queryParams}`)
                 
-                // Pass along tokens in query params
+               
             
                 } else {
                   res.redirect(`/?${querystring.stringify({ error: 'invalid_token'})}`);
