@@ -24,6 +24,10 @@ const StyledLoginButton = styled.a`
   }
 `;
 
+const Author = styled.h3`
+  margin-top:2rem;
+`;
+
 const LOGIN_URI =
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:8888/login'
@@ -34,6 +38,9 @@ const Login = () => (
     <StyledLoginButton href={LOGIN_URI}>
       Log in to Spotify
     </StyledLoginButton>
+    <Author>
+      Created By Zachary Distant
+    </Author>
   </StyledLoginContainer>
 );
 
